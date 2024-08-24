@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://0uwf2q1fx0sr"]
+[gd_scene load_steps=3 format=3 uid="uid://0uwf2q1fx0sr"]
+
+[ext_resource type="Texture2D" uid="uid://bsww0gnl7tvpg" path="res://Draws/Masina F1 Rosu.png" id="1_5wioo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kxpxl"]
+size = Vector2(36, 20)
 
 [node name="FormulaCar" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_kxpxl")
+
+[node name="MasinaF1Rosu" type="Sprite2D" parent="."]
+texture = ExtResource("1_5wioo")

@@ -12,7 +12,9 @@ func _physics_process(delta):
 	var speed = Vector2(0,0)
 	if Input.is_action_pressed("P1_Move_Up"):
 		speed.x += 100/acc
-		acc = acc / 2.0
+		acc = acc / 1.1
+	else:
+		acc = 100.0
 	velocity = speed
 	move_and_slide()
 	#rotation

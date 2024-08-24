@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://i1okdbtywvoj"]
 
+[ext_resource type="PackedScene" uid="uid://0uwf2q1fx0sr" path="res://formula_car.tscn" id="1_6gimg"]
 [ext_resource type="Texture2D" uid="uid://bsww0gnl7tvpg" path="res://Draws/Masina F1 Rosu.png" id="1_qcqhn"]
-[ext_resource type="Script" path="res://MasinaF1Rosu.gd" id="2_3j5f3"]
 
 [node name="GameF1" type="Node2D"]
 
@@ -9,7 +9,9 @@
 offset_right = 1157.0
 offset_bottom = 652.0
 
+[node name="FormulaCar" parent="." instance=ExtResource("1_6gimg")]
+position = Vector2(570, 331)
+
 [node name="MasinaF1Rosu" type="Sprite2D" parent="."]
-position = Vector2(589, 351)
+position = Vector2(798, 221)
 texture = ExtResource("1_qcqhn")
-script = ExtResource("2_3j5f3")

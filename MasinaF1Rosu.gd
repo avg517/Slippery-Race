@@ -1,20 +1,32 @@
 extends CharacterBody2D
-
-var acc=100.0
+var fric = 500.0
+#acceleration
+var acc=20.0
+#velocity idk
+var speed = Vector2(0,0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
+func breaks (force):
+	if speed.x > 0.0:
+		speed.x -= force
+	elif speed.x < -0.0:
+		speed.x += force
+	if speed.y > 0.0:
+		speed.y -= force
+	elif speed.y < -0.0:
+		speed.y += force
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	#movement
-	var speed = Vector2(0,0)
+	#movement 
+	var LabelP1 = "%s KM/H"
+	get_node("Label").text = LabelP1 % int(speed.length())
 	if Input.is_action_pressed("P1_Move_Up"):
-		speed.x += 100/acc
-		acc = acc / 1.1
-	else:
-		acc = 100.0
+		speed += Vector2(cos (global_rotation) * acc,sin (global_rotation) * acc)
+	
+	breaks(10.0)
+		
 	velocity = speed
 	move_and_slide()
 	#rotation

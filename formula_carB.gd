@@ -22,16 +22,17 @@ func _physics_process(delta):
 	#movement 
 	var LabelP1 = "%s KM/H"
 	get_node("Label").text = LabelP1 % int(speed.length())
-	if Input.is_action_pressed("P1_Move_Up"):
+	if Input.is_action_pressed("P2_Move_Up"):
 		speed += Vector2(cos (global_rotation) * acc,sin (global_rotation) * acc)
-	if Input.is_action_pressed("P1_Move_Down"):
+	##frane
+	if Input.is_action_pressed("P2_Move_Down"):
 		breaks(10.0)
 	breaks(0.1)
 		
 	velocity = speed
 	move_and_slide()
 	#rotation
-	if Input.is_action_pressed("P1_Move_Right"):
+	if Input.is_action_pressed("P2_Move_Right"):
 		global_rotation_degrees += 5
-	if Input.is_action_pressed("P1_Move_Left"):
+	if Input.is_action_pressed("P2_Move_Left"):
 		global_rotation_degrees -= 5

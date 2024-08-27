@@ -1,20 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://0uwf2q1fx0sr"]
+[gd_scene load_steps=4 format=3 uid="uid://ce2oqsxj02128"]
 
-[ext_resource type="Texture2D" uid="uid://bsww0gnl7tvpg" path="res://Draws/Masina F1 Rosu.png" id="1_5wioo"]
-[ext_resource type="Script" path="res://MasinaF1Rosu.gd" id="1_wwa7m"]
+[ext_resource type="Script" path="res://formula_carB.gd" id="1_m8ixt"]
+[ext_resource type="Texture2D" uid="uid://dmnqivixh8bel" path="res://Draws/Masina F1 Albastra.png" id="2_fc4pg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kxpxl"]
 size = Vector2(36, 20)
 
 [node name="FormulaCar" type="CharacterBody2D"]
-script = ExtResource("1_wwa7m")
+script = ExtResource("1_m8ixt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_kxpxl")
-
-[node name="MasinaF1Rosu" type="Sprite2D" parent="."]
-texture = ExtResource("1_5wioo")
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -24,3 +21,6 @@ offset_right = 1.0
 offset_bottom = -23.0
 scale = Vector2(1.8, 1.8)
 text = "5"
+
+[node name="MasinaF1Albastra" type="Sprite2D" parent="."]
+texture = ExtResource("2_fc4pg")

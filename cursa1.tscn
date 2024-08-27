@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://ipog80gubyp7"]
+
+[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="1_sdho7"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_cql6n"]
+a = Vector2(1148, 654)
+b = Vector2(1151, -5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_scjwe"]
+a = Vector2(-575, 326)
+b = Vector2(581, 325)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nuebd"]
+a = Vector2(581, -328)
+b = Vector2(-575, -325)
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Cursa1" type="Sprite2D" parent="."]
+scale = Vector2(2.30389, 2.30389)
+texture = ExtResource("1_sdho7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-302, -180)
+polygon = PackedVector2Array(-1, 0, 641, 3, 674, 25, 713, 84, 724, 116, 736, 149, 752, 209, 753, 299, 737, 361, 712, 387, -49, 387, -68, 374, -80, 343, -94, 304, -97, 281, -97, 181, -87, 152, -85, 116, -77, 87, -68, 54, -53, 23, -41, 10, -31, 9, -22, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-575, -325)
+shape = SubResource("SegmentShape2D_cql6n")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-575, -325)
+shape = SubResource("SegmentShape2D_cql6n")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-1726, -320)
+shape = SubResource("SegmentShape2D_cql6n")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_scjwe")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_nuebd")

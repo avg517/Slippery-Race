@@ -14,7 +14,7 @@ config/name="F1"
 run/main_scene="res://game_f_1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/image="res://Draws/splash.png"
-config/icon="res://icon.svg"
+config/icon="res://Draws/splash.png"
 
 [input]
 

@@ -4,14 +4,10 @@
 [ext_resource type="Script" path="res://MasinaF1Rosu.gd" id="1_wwa7m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kxpxl"]
-size = Vector2(36, 20)
+size = Vector2(41, 24)
 
 [node name="FormulaCar" type="CharacterBody2D"]
 script = ExtResource("1_wwa7m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_kxpxl")
 
 [node name="MasinaF1Rosu" type="Sprite2D" parent="."]
 texture = ExtResource("1_5wioo")
@@ -24,3 +20,14 @@ offset_right = 1.0
 offset_bottom = -23.0
 scale = Vector2(1.8, 1.8)
 text = "5"
+
+[node name="coll" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="coll"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_kxpxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_kxpxl")

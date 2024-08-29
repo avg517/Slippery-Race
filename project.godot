@@ -16,6 +16,11 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/image="res://Draws/splash.png"
 config/icon="res://Draws/splash.png"
 
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
+
 [input]
 
 P1_Move_Up={

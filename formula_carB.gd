@@ -36,3 +36,6 @@ func _physics_process(delta):
 		global_rotation_degrees += 5
 	if Input.is_action_pressed("P2_Move_Left"):
 		global_rotation_degrees -= 5
+	var overlapping_mobs = %coll.get_overlapping_bodies()
+	if overlapping_mobs.size() > 1:
+		speed = Vector2(0,0)

@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ce2oqsxj02128"]
+[gd_scene load_steps=5 format=3 uid="uid://ce2oqsxj02128"]
 
 [ext_resource type="Script" path="res://formula_carB.gd" id="1_m8ixt"]
 [ext_resource type="Texture2D" uid="uid://dmnqivixh8bel" path="res://Draws/Masina F1 Albastra.png" id="2_fc4pg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kxpxl"]
-size = Vector2(36, 20)
+size = Vector2(40, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqop5"]
+size = Vector2(41, 24)
 
 [node name="FormulaCar" type="CharacterBody2D"]
 script = ExtResource("1_m8ixt")
@@ -24,3 +27,10 @@ text = "5"
 
 [node name="MasinaF1Albastra" type="Sprite2D" parent="."]
 texture = ExtResource("2_fc4pg")
+
+[node name="coll" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="coll"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_aqop5")

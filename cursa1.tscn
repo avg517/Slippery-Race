@@ -29,6 +29,8 @@ scale = Vector2(2.30389, 2.30389)
 texture = ExtResource("1_sdho7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+light_mask = 3
+visibility_layer = 3
 position = Vector2(-302, -180)
 polygon = PackedVector2Array(-1, 0, 641, 3, 674, 25, 713, 84, 724, 116, 736, 149, 752, 209, 753, 299, 737, 361, 712, 387, -49, 387, -68, 374, -80, 343, -94, 304, -97, 281, -97, 181, -87, 152, -85, 116, -77, 87, -68, 54, -53, 23, -41, 10, -31, 9, -22, 2)
 
@@ -66,6 +68,12 @@ offset_left = -575.0
 offset_top = -299.0
 offset_right = -436.0
 offset_bottom = -276.0
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -575.0
+offset_top = -273.0
+offset_right = -436.0
+offset_bottom = -250.0
 
 [node name="LapTime" type="Timer" parent="."]
 wait_time = 4096.0

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://btndqepwdxrjs"]
+
+[node name="PlayersMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1 Player" type="Button" parent="."]
+offset_left = 479.0
+offset_top = 232.0
+offset_right = 673.0
+offset_bottom = 323.0
+auto_translate = false
+flat = true
+
+[node name="2 Players" type="Button" parent="."]
+offset_left = 485.0
+offset_top = 345.0
+offset_right = 659.0
+offset_bottom = 433.0
+auto_translate = false
+flat = true

@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://btndqepwdxrjs"]
+[gd_scene load_steps=4 format=3 uid="uid://btndqepwdxrjs"]
+
+[ext_resource type="Texture2D" uid="uid://d1gclocrf6i6t" path="res://Draws/1Player.png" id="1_6iy4l"]
+[ext_resource type="Script" path="res://players_menu.gd" id="1_u8usx"]
+[ext_resource type="Texture2D" uid="uid://culihooi70qy8" path="res://Draws/2Players.png" id="2_6h2dr"]
 
 [node name="PlayersMenu" type="Control"]
 layout_mode = 3
@@ -7,8 +11,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_u8usx")
 
 [node name="1 Player" type="Button" parent="."]
+layout_mode = 0
 offset_left = 479.0
 offset_top = 232.0
 offset_right = 673.0
@@ -17,9 +23,23 @@ auto_translate = false
 flat = true
 
 [node name="2 Players" type="Button" parent="."]
+layout_mode = 0
 offset_left = 485.0
 offset_top = 345.0
 offset_right = 659.0
 offset_bottom = 433.0
 auto_translate = false
 flat = true
+
+[node name="1Player" type="Sprite2D" parent="."]
+position = Vector2(574, 274)
+scale = Vector2(0.485148, 0.485148)
+texture = ExtResource("1_6iy4l")
+
+[node name="2Players" type="Sprite2D" parent="."]
+position = Vector2(571, 387)
+scale = Vector2(0.425743, 0.425743)
+texture = ExtResource("2_6h2dr")
+
+[connection signal="pressed" from="1 Player" to="." method="_on__player_pressed"]
+[connection signal="pressed" from="2 Players" to="." method="_on__players_pressed"]

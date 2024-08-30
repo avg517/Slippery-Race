@@ -21,7 +21,7 @@ func breaks (force):
 func _physics_process(delta):
 	#movement 
 	var LabelP1 = "%s KM/H"
-	get_node("Label").text = LabelP1 % int(speed.length())
+	get_node("Label").text = LabelP1 % int(speed.length()*0.1527)
 	if Input.is_action_pressed("P1_Move_Up"):
 		speed += Vector2(cos (global_rotation) * acc,sin (global_rotation) * acc)
 	if Input.is_action_pressed("P1_Move_Down"):
@@ -38,3 +38,5 @@ func _physics_process(delta):
 	var overlapping_mobs = %coll.get_overlapping_bodies()
 	if overlapping_mobs.size() > 1:
 		speed = Vector2(0,0)
+	#menuEntering
+

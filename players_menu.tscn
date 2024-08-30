@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://btndqepwdxrjs"]
+[gd_scene load_steps=5 format=3 uid="uid://btndqepwdxrjs"]
 
 [ext_resource type="Texture2D" uid="uid://d1gclocrf6i6t" path="res://Draws/1Player.png" id="1_6iy4l"]
 [ext_resource type="Script" path="res://players_menu.gd" id="1_u8usx"]
 [ext_resource type="Texture2D" uid="uid://culihooi70qy8" path="res://Draws/2Players.png" id="2_6h2dr"]
+[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="4_3tnm3"]
 
 [node name="PlayersMenu" type="Control"]
 layout_mode = 3
@@ -40,6 +41,12 @@ texture = ExtResource("1_6iy4l")
 position = Vector2(571, 387)
 scale = Vector2(0.425743, 0.425743)
 texture = ExtResource("2_6h2dr")
+
+[node name="Cursa1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(575.601, 322)
+scale = Vector2(2.30389, 2.30389)
+texture = ExtResource("4_3tnm3")
 
 [connection signal="pressed" from="1 Player" to="." method="_on__player_pressed"]
 [connection signal="pressed" from="2 Players" to="." method="_on__players_pressed"]

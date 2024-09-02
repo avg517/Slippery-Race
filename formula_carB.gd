@@ -31,7 +31,7 @@ func _physics_process(delta):
 		speed += Vector2(cos (global_rotation) * acc,sin (global_rotation) * acc)
 	##frane
 	if Input.is_action_pressed("P2_Move_Down"):
-		breaks(10.0)
+		breaks(20.0)
 	breaks(0.1)
 		
 	velocity = speed

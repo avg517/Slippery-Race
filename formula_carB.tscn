@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ce2oqsxj02128"]
 
-[ext_resource type="Script" path="res://formula_carB.gd" id="1_m8ixt"]
+[ext_resource type="Script" uid="uid://dpllbwjifwc0d" path="res://formula_carB.gd" id="1_m8ixt"]
 [ext_resource type="Texture2D" uid="uid://dmnqivixh8bel" path="res://Draws/Masina F1 Albastra.png" id="2_fc4pg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kxpxl"]

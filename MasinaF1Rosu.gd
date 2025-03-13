@@ -30,8 +30,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed("P1_Move_Up"):
 		speed += Vector2(cos (global_rotation) * acc,sin (global_rotation) * acc)
 	if Input.is_action_pressed("P1_Move_Down"):
-		breaks(0.01)
-	friction(1)
+		#breaks(0.01)
+		friction(20);
+	friction(1);
 		
 	velocity = speed
 	move_and_slide()

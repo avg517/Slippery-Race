@@ -17,8 +17,8 @@ func friction (force):
 	elif speed.y < -0.0:
 		speed.y += force
 func breaks(force):
-	if(speed != Vector2(0,0)):
-		speed -= Vector2(cos (global_rotation) * force*(speed.length()/2),sin (global_rotation) * force)*(speed.length()/2)
+	if(speed.x*cos (global_rotation) > 0 and speed.y *sin (global_rotation)>0):
+		speed -= Vector2(cos (global_rotation) * force,sin (global_rotation) * force)#*(speed.length()/2)  *(speed.length()/2)
 	
 	
 
@@ -30,8 +30,8 @@ func _physics_process(delta):
 	if Input.is_action_pressed("P1_Move_Up"):
 		speed += Vector2(cos (global_rotation) * acc,sin (global_rotation) * acc)
 	if Input.is_action_pressed("P1_Move_Down"):
-		#breaks(0.01)
-		friction(20.0);
+		breaks(10.0)
+		#friction(20.0);
 	friction(1);
 		
 	velocity = speed

@@ -13,8 +13,10 @@ position = Vector2(-5, -4)
 [node name="FormulaCar" parent="." instance=ExtResource("2_31blf")]
 position = Vector2(487, 1521)
 rotation = -1.5708
+scale = Vector2(0.5, 0.5)
 
 [node name="Camera2D" type="Camera2D" parent="FormulaCar"]
 position = Vector2(8.74228e-08, 1.52588e-05)
 rotation = 1.5708
 ignore_rotation = false
+zoom = Vector2(2.5, 2.5)

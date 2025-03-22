@@ -75,6 +75,10 @@ Menu={
 ]
 }
 
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
 [rendering]
 
 anti_aliasing/quality/msaa_2d=2

@@ -25,6 +25,7 @@ flat = true
 
 [node name="2 Players" type="Button" parent="."]
 auto_translate_mode = 2
+visible = false
 layout_mode = 0
 offset_left = 485.0
 offset_top = 345.0
@@ -38,6 +39,7 @@ scale = Vector2(0.485148, 0.485148)
 texture = ExtResource("1_6iy4l")
 
 [node name="2Players" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(571, 387)
 scale = Vector2(0.425743, 0.425743)
 texture = ExtResource("2_6h2dr")

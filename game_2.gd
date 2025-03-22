@@ -12,6 +12,7 @@ func _process(delta):
 		get_tree().change_scene_to_file("res://menu.tscn")
 	if Global.lap >= 3:
 		Global.Ptime = Global.LapTime
+		Global.save()
 		get_tree().change_scene_to_file("res://menu.tscn")
 		Global.LapTime = 0
-		Global.lap = -1
+		Global.lap = 0

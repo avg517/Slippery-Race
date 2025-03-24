@@ -17,7 +17,9 @@ texture_filter = 1
 texture = ExtResource("1_5wioo")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 modulate = Color(0, 0, 0, 1)
+texture_filter = 1
 offset_left = -10.0
 offset_top = -46.0
 offset_right = 1.0

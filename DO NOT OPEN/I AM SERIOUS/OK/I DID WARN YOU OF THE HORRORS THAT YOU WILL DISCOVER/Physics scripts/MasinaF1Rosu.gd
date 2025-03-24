@@ -19,7 +19,7 @@ func friction (force): #force = viteza maxima
 	#	speed.y += force
 func breaks(force):
 	if(speed.x*cos (speed.angle()) > 0 and speed.y *sin (speed.angle())>0):
-		speed -= Vector2(cos (speed.angle()) * force,sin (speed.angle()) * force)#*(speed.length()/2)  *(speed.length()/2)
+		speed -= Vector2(cos (speed.angle()) * force,sin (speed.angle()) * force)
 		#friction(0.5)
 		#friction(30)
 	

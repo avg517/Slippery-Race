@@ -26,6 +26,7 @@ scale = Vector2(1.8, 1.8)
 text = "5"
 
 [node name="MasinaF1Albastra" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("2_fc4pg")
 
 [node name="coll" type="Area2D" parent="."]

@@ -33,15 +33,18 @@ offset_bottom = 433.0
 flat = true
 
 [node name="Quit" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(582, 390)
 texture = ExtResource("2_idlt0")
 
 [node name="Start2" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(581, 280)
 texture = ExtResource("3_21wd0")
 
 [node name="Cursa1" type="Sprite2D" parent="."]
 z_index = -9
+texture_filter = 1
 position = Vector2(574, 326)
 scale = Vector2(2.30389, 2.30389)
 texture = ExtResource("4_mc0u1")

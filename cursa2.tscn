@@ -7,6 +7,7 @@
 size = Vector2(256, 1)
 
 [node name="Node2D" type="CharacterBody2D"]
+texture_filter = 1
 script = ExtResource("1_euynr")
 
 [node name="Cursa2" type="Sprite2D" parent="."]

@@ -8,8 +8,8 @@ var speed = Vector2(0,0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
-func friction (force): #force = viteza maxima
-	speed -= Vector2(cos (speed.angle()) * speed.length()/force,sin (speed.angle()) * speed.length()/force)
+func friction (force,mult): #force = viteza maxima mult e multiply, lasa 1 pentru acceleratie normala
+	speed -= Vector2(cos (speed.angle()) * speed.length()/force*mult*acc/5,sin (speed.angle()) * speed.length()/force*mult*acc/5)
 	#if speed.x > 0.0:
 	#	speed.x -= force
 	#elif speed.x < -0.0:
@@ -30,7 +30,8 @@ func rotatee(direction,speedd): #right =1
 	elif(direction==0):
 		global_rotation_degrees -= speedd#/(speed.length()/2+ 0.1)-1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
+func accel(acceler):
+	speed += Vector2(cos (global_rotation) * acceler,sin (global_rotation) * acceler)
 
 
 func _physics_process(delta):
@@ -39,7 +40,7 @@ func _physics_process(delta):
 		#get_node("Label").text = LabelP1 % int(speed.length()/4)
 	Global.speed_1 = LabelP1 % int(speed.length()/4)
 	if Input.is_action_pressed("P1_Move_Up"):
-		speed += Vector2(cos (global_rotation) * acc,sin (global_rotation) * acc)
+		accel(acc) #5 e default
 	if Input.is_action_pressed("P1_Move_Down"):
 		breaks(10.0)
 		#friction(20.0);
@@ -57,6 +58,6 @@ func _physics_process(delta):
 		speed -= Vector2(cos (speed.angle()) * 100.0,sin (speed.angle()) * 100.0)
 	#menuEntering
 	if Global.onGrass == true:
-		friction(30)
+		friction(30,1)
 	else:
-		friction(100);
+		friction(100,1);

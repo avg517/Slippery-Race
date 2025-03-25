@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://0uwf2q1fx0sr"]
 
 [ext_resource type="Texture2D" uid="uid://bsww0gnl7tvpg" path="res://Draws/Masina F1 Rosu.png" id="1_5wioo"]
-[ext_resource type="Script" uid="uid://bbw66a15qtuqd" path="res://MasinaF1Rosu.gd" id="1_wwa7m"]
+[ext_resource type="Script" path="res://MasinaF1Rosu.gd" id="1_wwa7m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kxpxl"]
 size = Vector2(41, 24)

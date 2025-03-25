@@ -12,6 +12,7 @@ script = ExtResource("1_waxkw")
 
 [node name="FormulaCar" parent="." instance=ExtResource("1_6gimg")]
 position = Vector2(64, -255)
+script = null
 
 [node name="FormulaCar2" parent="." instance=ExtResource("3_lg0by")]
 position = Vector2(-38, -216)

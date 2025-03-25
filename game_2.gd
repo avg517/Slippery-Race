@@ -3,9 +3,10 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Global.onGrass = false
 
-
+func _physics_process(delta: float) -> void:
+	get_node("FormulaCar/Label2").text = str(Global.speed_1)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_pressed("Menu"):

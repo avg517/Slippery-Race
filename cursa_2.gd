@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-
+var readyy = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -18,7 +18,8 @@ func _physics_process(delta):
 	if Global.lap >= 1:
 		Global.LapTime = float(Global.LapTime) + delta
 		update_ui()
-
+	if (Global.lap>=1):
+		readyy = true
 	var LabelP1 = "Lap %s"
 	get_node("Label").text = LabelP1 % Global.lap
 	var LabelT = "Time %s"
@@ -27,3 +28,15 @@ func _physics_process(delta):
 	get_node("Label3").text = LabelTP % Global.Ptime
 func _on_area_2d_body_entered(body):
 	Global.lap += 1
+
+
+func onGrass(body: Node2D) -> void:
+	if readyy == true:
+		Global.onGrass = true
+
+
+func NotOnGrass(body: Node2D) -> void:
+	Global.onGrass = false
+
+
+	

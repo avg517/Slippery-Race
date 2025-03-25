@@ -23,6 +23,17 @@ rotation = 1.5708
 ignore_rotation = false
 zoom = Vector2(2.5, 2.5)
 
+[node name="Label2" type="Label" parent="FormulaCar"]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+offset_left = -150.001
+offset_top = 283.999
+offset_right = -139.001
+offset_bottom = 306.999
+rotation = 1.5708
+scale = Vector2(1.8, 1.8)
+text = "5"
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="UI"]

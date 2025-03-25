@@ -3,10 +3,11 @@ var fric = 500.0
 #acceleration
 var acc=5.0
 #velocity idk
+
 var speed = Vector2(0,0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 func friction (force): #force = viteza maxima
 	speed -= Vector2(cos (speed.angle()) * speed.length()/force,sin (speed.angle()) * speed.length()/force)
 	#if speed.x > 0.0:
@@ -35,13 +36,14 @@ func rotatee(direction,speedd): #right =1
 func _physics_process(delta):
 	#movement 
 	var LabelP1 = "%s KM/H"
-	get_node("Label").text = LabelP1 % int(speed.length()/4)
+		#get_node("Label").text = LabelP1 % int(speed.length()/4)
+	Global.speed_1 = LabelP1 % int(speed.length()/4)
 	if Input.is_action_pressed("P1_Move_Up"):
 		speed += Vector2(cos (global_rotation) * acc,sin (global_rotation) * acc)
 	if Input.is_action_pressed("P1_Move_Down"):
 		breaks(10.0)
 		#friction(20.0);
-	friction(100);
+	
 		
 	velocity = speed
 	move_and_slide()
@@ -54,3 +56,7 @@ func _physics_process(delta):
 	if (overlapping_mobs.size() > 1 and speed.x*cos (global_rotation) > 0 and speed.y *sin (global_rotation)>0):
 		speed -= Vector2(cos (speed.angle()) * 100.0,sin (speed.angle()) * 100.0)
 	#menuEntering
+	if Global.onGrass == true:
+		friction(30)
+	else:
+		friction(100);

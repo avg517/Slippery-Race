@@ -28,27 +28,6 @@ polygon = PackedVector2Array(578, 547, 582, 534, 602, 533, 620, 541, 657, 577, 6
 position = Vector2(515, 1436.5)
 shape = SubResource("RectangleShape2D_euynr")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 391.0
-offset_top = 1395.0
-offset_right = 530.0
-offset_bottom = 1418.0
-scale = Vector2(0.555, 0.555)
-
-[node name="Label2" type="Label" parent="."]
-offset_left = 391.0
-offset_top = 1406.0
-offset_right = 530.0
-offset_bottom = 1429.0
-scale = Vector2(0.555, 0.555)
-
-[node name="Label3" type="Label" parent="."]
-offset_left = 391.0
-offset_top = 1418.0
-offset_right = 530.0
-offset_bottom = 1441.0
-scale = Vector2(0.555, 0.555)
-
 [node name="LapTime" type="Timer" parent="."]
 wait_time = 4096.0
 

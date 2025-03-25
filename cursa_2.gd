@@ -20,12 +20,7 @@ func _physics_process(delta):
 		update_ui()
 	if (Global.lap>=1):
 		readyy = true
-	var LabelP1 = "Lap %s"
-	get_node("Label").text = LabelP1 % Global.lap
-	var LabelT = "Time %s"
-	get_node("Label2").text = LabelT % Global.LapTime
-	var LabelTP = "Previous Time %s"
-	get_node("Label3").text = LabelTP % Global.Ptime
+	
 func _on_area_2d_body_entered(body):
 	Global.lap += 1
 

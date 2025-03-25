@@ -34,6 +34,27 @@ rotation = 1.5708
 scale = Vector2(1.8, 1.8)
 text = "5"
 
+[node name="Label3" type="Label" parent="FormulaCar"]
+offset_left = 251.999
+offset_top = 302.001
+offset_right = 390.999
+offset_bottom = 325.001
+rotation = 1.5708
+
+[node name="Label4" type="Label" parent="FormulaCar"]
+offset_left = 229.999
+offset_top = 302.001
+offset_right = 368.999
+offset_bottom = 325.001
+rotation = 1.5708
+
+[node name="Label5" type="Label" parent="FormulaCar"]
+offset_left = 205.999
+offset_top = 302.001
+offset_right = 344.999
+offset_bottom = 325.001
+rotation = 1.5708
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="UI"]

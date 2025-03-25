@@ -26,10 +26,10 @@ zoom = Vector2(2.5, 2.5)
 [node name="Label2" type="Label" parent="FormulaCar"]
 modulate = Color(0, 0, 0, 1)
 texture_filter = 1
-offset_left = -150.001
-offset_top = 283.999
-offset_right = -139.001
-offset_bottom = 306.999
+offset_left = -152.001
+offset_top = 285.999
+offset_right = -141.001
+offset_bottom = 308.999
 rotation = 1.5708
 scale = Vector2(1.8, 1.8)
 text = "5"

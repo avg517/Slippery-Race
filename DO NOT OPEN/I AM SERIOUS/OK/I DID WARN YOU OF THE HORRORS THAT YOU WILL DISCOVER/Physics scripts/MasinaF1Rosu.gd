@@ -1,7 +1,7 @@
 extends CharacterBody2D
 var fric = 500.0
 #acceleration
-var acc=5.0
+#var acc=5.0
 #velocity idk
 
 var speed = Vector2(0,0)
@@ -9,7 +9,7 @@ var speed = Vector2(0,0)
 func _ready():
 	pass
 func friction (force,mult): #force = viteza maxima mult e multiply, lasa 1 pentru acceleratie normala
-	speed -= Vector2(cos (speed.angle()) * speed.length()/force*mult*acc/5,sin (speed.angle()) * speed.length()/force*mult*acc/5)
+	speed -= Vector2(cos (speed.angle()) * speed.length()/force*mult*Global.acc/5,sin (speed.angle()) * speed.length()/force*mult*Global.acc/5)
 	#if speed.x > 0.0:
 	#	speed.x -= force
 	#elif speed.x < -0.0:
@@ -40,7 +40,7 @@ func _physics_process(delta):
 		#get_node("Label").text = LabelP1 % int(speed.length()/4)
 	Global.speed_1 = LabelP1 % int(speed.length()/4)
 	if Input.is_action_pressed("P1_Move_Up"):
-		accel(acc) #5 e default
+		accel(Global.acc) #5 e default
 	if Input.is_action_pressed("P1_Move_Down"):
 		breaks(10.0)
 		#friction(20.0);
@@ -58,6 +58,6 @@ func _physics_process(delta):
 		speed -= Vector2(cos (speed.angle()) * 100.0,sin (speed.angle()) * 100.0)
 	#menuEntering
 	if Global.onGrass == true:
-		friction(Global.top_speed/4,1);
+		friction(Global.top_speed/Global.acc,1);
 	else:
 		friction(Global.top_speed,1);

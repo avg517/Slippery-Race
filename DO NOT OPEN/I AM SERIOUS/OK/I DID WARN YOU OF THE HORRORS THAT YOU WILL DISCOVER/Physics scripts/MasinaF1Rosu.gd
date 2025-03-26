@@ -58,6 +58,6 @@ func _physics_process(delta):
 		speed -= Vector2(cos (speed.angle()) * 100.0,sin (speed.angle()) * 100.0)
 	#menuEntering
 	if Global.onGrass == true:
-		friction(30,1)
+		friction(Global.top_speed/4,1);
 	else:
-		friction(100,1);
+		friction(Global.top_speed,1);

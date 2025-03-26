@@ -8,6 +8,7 @@ var LapTime = 0.0
 var Ptime=0.0 #cel mai bun timp
 var onGrass = false
 var speed_1 = 0
+var top_speed = 120.0
 
 func _ready():
 	load_data()

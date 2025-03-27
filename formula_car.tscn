@@ -37,3 +37,51 @@ shape = SubResource("RectangleShape2D_3bonj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_kxpxl")
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+offset_left = -152.001
+offset_top = 285.999
+offset_right = -141.001
+offset_bottom = 308.999
+rotation = 1.5708
+scale = Vector2(1.8, 1.8)
+text = "5"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 252.002
+offset_top = -453.999
+offset_right = 391.002
+offset_bottom = -430.999
+rotation = 1.5708
+text = "23232"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 230.002
+offset_top = -453.999
+offset_right = 369.002
+offset_bottom = -430.999
+rotation = 1.5708
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 206.002
+offset_top = -453.999
+offset_right = 345.002
+offset_bottom = -430.999
+rotation = 1.5708
+text = "232323"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 182.0
+offset_top = -453.999
+offset_right = 321.0
+offset_bottom = -430.999
+rotation = 1.5708
+text = "2323"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(8.74228e-08, 1.52588e-05)
+rotation = 1.5708
+ignore_rotation = false
+zoom = Vector2(2.5, 2.5)

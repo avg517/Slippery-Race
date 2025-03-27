@@ -63,12 +63,19 @@ func _physics_process(delta):
 	elif(gear==6):
 		topSpeed=gear6
 		torq = 5.0
-	Global.gearr = gear
 	#movement 
 	Global.poz1Y = global_position.y
 	Global.poz1X = global_position.x
 	Global.rot1 = global_rotation
-	
+	var LabelP2 = "Lap %s"
+	var lapp = str(Global.lap)
+	get_node("Label3").text = LabelP2 % lapp
+	var LabelT = "Time %s"
+	get_node("Label4").text = LabelT % Global.LapTime
+	var LabelTP = "Previous Time %s"
+	get_node("Label5").text = LabelTP % Global.Ptime
+	var Label6 = "Gear: %s"
+	get_node("Label6").text = Label6 % gear
 	var LabelP1 = "%s KM/H"
 		#get_node("Label").text = LabelP1 % int(speed.length()/4)
 	Global.speed_1 = LabelP1 % int(speed.length()/4)

@@ -10,7 +10,9 @@ var onGrass = false
 var speed_1 = 0
 var top_speed = 120.0
 var acc =5.0
-
+var poz1Y
+var poz1X
+var rot1
 func _ready():
 	load_data()
 

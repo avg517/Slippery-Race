@@ -36,6 +36,10 @@ func accel(acceler):
 
 func _physics_process(delta):
 	#movement 
+	Global.poz1Y = global_position.y
+	Global.poz1X = global_position.x
+	Global.rot1 = global_rotation
+	
 	var LabelP1 = "%s KM/H"
 		#get_node("Label").text = LabelP1 % int(speed.length()/4)
 	Global.speed_1 = LabelP1 % int(speed.length()/4)

@@ -3,13 +3,23 @@ var fric = 500.0
 #acceleration
 #var acc=5.0
 #velocity idk
+#gears top speed
+var gear=1
+var gear1=34.0
+var gear2=51.0
+var gear3=68.0
+var gear4=85.0
+var gear5=102.0
+var gear6=120.0
+var topSpeed
+var torq=5
 
 var speed = Vector2(0,0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
 func friction (force,mult): #force = viteza maxima mult e multiply, lasa 1 pentru acceleratie normala
-	speed -= Vector2(cos (speed.angle()) * speed.length()/force*mult*Global.acc/5,sin (speed.angle()) * speed.length()/force*mult*Global.acc/5)
+	speed -= Vector2(cos (speed.angle()) * speed.length()/force*mult*torq/5,sin (speed.angle()) * speed.length()/force*mult*torq/5)
 	#if speed.x > 0.0:
 	#	speed.x -= force
 	#elif speed.x < -0.0:
@@ -35,6 +45,25 @@ func accel(acceler):
 
 
 func _physics_process(delta):
+	if(gear==1):
+		topSpeed=gear1
+		torq = 17.5
+	elif(gear==2):
+		topSpeed=gear2
+		torq = 14.0
+	elif(gear==3):
+		topSpeed=gear3
+		torq = 11.0
+	elif(gear==4):
+		topSpeed=gear4
+		torq = 9.0
+	elif(gear==5):
+		topSpeed=gear5
+		torq = 7.0
+	elif(gear==6):
+		topSpeed=gear6
+		torq = 5.0
+	Global.gearr = gear
 	#movement 
 	Global.poz1Y = global_position.y
 	Global.poz1X = global_position.x
@@ -44,12 +73,14 @@ func _physics_process(delta):
 		#get_node("Label").text = LabelP1 % int(speed.length()/4)
 	Global.speed_1 = LabelP1 % int(speed.length()/4)
 	if Input.is_action_pressed("P1_Move_Up"):
-		accel(Global.acc) #5 e default
+		accel(torq) #5 e default
 	if Input.is_action_pressed("P1_Move_Down"):
 		breaks(10.0)
 		#friction(20.0);
-	
-		
+	if Input.is_action_just_released("P1_gear_up") and gear!=6:
+		gear+=1
+	if Input.is_action_just_released("P1_gear_down") and gear !=1:
+		gear-=1
 	velocity = speed
 	move_and_slide()
 	#rotation
@@ -62,6 +93,6 @@ func _physics_process(delta):
 		speed -= Vector2(cos (speed.angle()) * 100.0,sin (speed.angle()) * 100.0)
 	#menuEntering
 	if Global.onGrass == true:
-		friction(Global.top_speed/Global.acc,1);
+		friction(topSpeed/torq,1);
 	else:
-		friction(Global.top_speed,1);
+		friction(topSpeed,1);

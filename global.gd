@@ -13,7 +13,7 @@ var acc =5.0
 var poz1Y
 var poz1X
 var rot1
-
+var gearr
 
 func _ready():
 	load_data()

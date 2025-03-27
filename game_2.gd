@@ -28,3 +28,5 @@ func _process(delta):
 	get_node("FormulaCar/Label4").text = LabelT % Global.LapTime
 	var LabelTP = "Previous Time %s"
 	get_node("FormulaCar/Label5").text = LabelTP % Global.Ptime
+	var Label6 = "Gear: %s"
+	get_node("FormulaCar/Label6").text = Label6 % Global.gearr

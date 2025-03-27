@@ -62,6 +62,13 @@ offset_right = 345.002
 offset_bottom = -430.999
 rotation = 1.5708
 
+[node name="Label6" type="Label" parent="FormulaCar"]
+offset_left = 182.0
+offset_top = -453.999
+offset_right = 321.0
+offset_bottom = -430.999
+rotation = 1.5708
+
 [node name="SubViewportContainer" type="SubViewportContainer" parent="FormulaCar"]
 z_index = 100
 z_as_relative = false

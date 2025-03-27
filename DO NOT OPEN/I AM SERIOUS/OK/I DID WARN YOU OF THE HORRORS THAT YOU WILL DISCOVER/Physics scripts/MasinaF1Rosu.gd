@@ -40,8 +40,11 @@ func rotatee(direction,speedd): #right =1
 	elif(direction==0):
 		global_rotation_degrees -= speedd#/(speed.length()/2+ 0.1)-1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func accel(acceler):
-	speed += Vector2(cos (global_rotation) * acceler,sin (global_rotation) * acceler)
+func accel(acceler,directie):
+	if(directie==1):
+		speed += Vector2(cos (global_rotation) * acceler,sin (global_rotation) * acceler)
+	else:
+		speed -= Vector2(cos (global_rotation) * acceler,sin (global_rotation) * acceler)
 
 
 func _physics_process(delta):
@@ -63,6 +66,9 @@ func _physics_process(delta):
 	elif(gear==6):
 		topSpeed=gear6
 		torq = 5.0
+	elif(gear==0):
+		topSpeed=20.0
+		torq=20.0
 	#movement 
 	Global.poz1Y = global_position.y
 	Global.poz1X = global_position.x
@@ -80,13 +86,16 @@ func _physics_process(delta):
 		#get_node("Label").text = LabelP1 % int(speed.length()/4)
 	Global.speed_1 = LabelP1 % int(speed.length()/4)
 	if Input.is_action_pressed("P1_Move_Up"):
-		accel(torq) #5 e default
+		if(gear!=0):
+			accel(torq,1) #5 e default
+		else:
+			accel(torq,2)
 	if Input.is_action_pressed("P1_Move_Down"):
 		breaks(10.0)
 		#friction(20.0);
 	if Input.is_action_just_released("P1_gear_up") and gear!=6:
 		gear+=1
-	if Input.is_action_just_released("P1_gear_down") and gear !=1:
+	if Input.is_action_just_released("P1_gear_down") and gear !=0:
 		gear-=1
 	velocity = speed
 	move_and_slide()

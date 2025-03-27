@@ -13,6 +13,6 @@ func _ready() -> void:
 #Global.poz1X + (487-(
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	global_position.y = -1229 + Global.poz1X
+	global_position.y = -1109 + Global.poz1X
 	global_position.x = 1253 - Global.poz1Y
 	#global_rotation = Global.rot1

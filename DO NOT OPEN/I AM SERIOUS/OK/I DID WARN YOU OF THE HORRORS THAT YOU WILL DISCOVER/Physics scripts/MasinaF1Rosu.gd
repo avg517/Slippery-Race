@@ -1,14 +1,25 @@
 extends CharacterBody2D
 var fric = 500.0
 #acceleration
-var acc=5.0
+#var acc=5.0
 #velocity idk
+#gears top speed
+var gear=1
+var gear1=34.0
+var gear2=51.0
+var gear3=68.0
+var gear4=85.0
+var gear5=102.0
+var gear6=120.0
+var topSpeed
+var torq=5
+
 var speed = Vector2(0,0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-func friction (force): #force = viteza maxima
-	speed -= Vector2(cos (speed.angle()) * speed.length()/force,sin (speed.angle()) * speed.length()/force)
+	pass
+func friction (force,mult): #force = viteza maxima mult e multiply, lasa 1 pentru acceleratie normala
+	speed -= Vector2(cos (speed.angle()) * speed.length()/force*mult*torq/5,sin (speed.angle()) * speed.length()/force*mult*torq/5)
 	#if speed.x > 0.0:
 	#	speed.x -= force
 	#elif speed.x < -0.0:
@@ -29,20 +40,63 @@ func rotatee(direction,speedd): #right =1
 	elif(direction==0):
 		global_rotation_degrees -= speedd#/(speed.length()/2+ 0.1)-1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
+func accel(acceler,directie):
+	if(directie==1):
+		speed += Vector2(cos (global_rotation) * acceler,sin (global_rotation) * acceler)
+	else:
+		speed -= Vector2(cos (global_rotation) * acceler,sin (global_rotation) * acceler)
 
 
 func _physics_process(delta):
+	if(gear==1):
+		topSpeed=gear1
+		torq = 17.5
+	elif(gear==2):
+		topSpeed=gear2
+		torq = 14.0
+	elif(gear==3):
+		topSpeed=gear3
+		torq = 11.0
+	elif(gear==4):
+		topSpeed=gear4
+		torq = 9.0
+	elif(gear==5):
+		topSpeed=gear5
+		torq = 7.0
+	elif(gear==6):
+		topSpeed=gear6
+		torq = 5.0
+	elif(gear==0):
+		topSpeed=20.0
+		torq=20.0
 	#movement 
+	Global.poz1Y = global_position.y
+	Global.poz1X = global_position.x
+	Global.rot1 = global_rotation
+	var LabelP2 = "Lap %s"
+	var lapp = str(Global.lap)
+	get_node("Label3").text = LabelP2 % lapp
+	var LabelT = "Time %s"
+	get_node("Label4").text = LabelT % Global.LapTime
+	var LabelTP = "Previous Time %s"
+	get_node("Label5").text = LabelTP % Global.Ptime
+	var Label6 = "Gear: %s"
+	get_node("Label6").text = Label6 % gear
 	var LabelP1 = "%s KM/H"
-	get_node("Label").text = LabelP1 % int(speed.length()/4)
+		#get_node("Label").text = LabelP1 % int(speed.length()/4)
+	Global.speed_1 = LabelP1 % int(speed.length()/4)
 	if Input.is_action_pressed("P1_Move_Up"):
-		speed += Vector2(cos (global_rotation) * acc,sin (global_rotation) * acc)
+		if(gear!=0):
+			accel(torq,1) #5 e default
+		else:
+			accel(torq,2)
 	if Input.is_action_pressed("P1_Move_Down"):
 		breaks(10.0)
 		#friction(20.0);
-	friction(100);
-		
+	if Input.is_action_just_released("P1_gear_up") and gear!=6:
+		gear+=1
+	if Input.is_action_just_released("P1_gear_down") and gear !=0:
+		gear-=1
 	velocity = speed
 	move_and_slide()
 	#rotation
@@ -54,3 +108,7 @@ func _physics_process(delta):
 	if (overlapping_mobs.size() > 1 and speed.x*cos (global_rotation) > 0 and speed.y *sin (global_rotation)>0):
 		speed -= Vector2(cos (speed.angle()) * 100.0,sin (speed.angle()) * 100.0)
 	#menuEntering
+	if Global.onGrass == true:
+		friction(topSpeed/torq,1);
+	else:
+		friction(topSpeed,1);

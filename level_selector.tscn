@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://ys1ua8l0cf3c"]
+
+[ext_resource type="Script" uid="uid://bt88q6k7j4rh3" path="res://level_selector.gd" id="1_2db0o"]
+[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="1_5xyw6"]
+[ext_resource type="Texture2D" uid="uid://do5ani6k3nao5" path="res://Draws/SpeedCircuit1.png" id="2_5xyw6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2db0o")
+
+[node name="Cursa1" type="Sprite2D" parent="."]
+z_index = -9
+texture_filter = 1
+position = Vector2(574, 326)
+scale = Vector2(2.30389, 2.30389)
+texture = ExtResource("1_5xyw6")
+
+[node name="Cursa2" type="Button" parent="."]
+auto_translate_mode = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.0
+offset_top = -45.5
+offset_right = 197.0
+offset_bottom = 45.5
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Start2" type="Sprite2D" parent="Cursa2"]
+texture_filter = 1
+position = Vector2(196, 46)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_5xyw6")
+
+[connection signal="pressed" from="Cursa2" to="." method="_on_start_pressed"]

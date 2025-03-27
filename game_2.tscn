@@ -1,13 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://wlsok4gt4uyy"]
+[gd_scene load_steps=7 format=3 uid="uid://wlsok4gt4uyy"]
 
 [ext_resource type="Script" uid="uid://duwy6re3uerep" path="res://game_2.gd" id="1_31blf"]
 [ext_resource type="PackedScene" uid="uid://dyr3yh2h4a5sf" path="res://cursa2.tscn" id="1_me4bl"]
 [ext_resource type="PackedScene" uid="uid://0uwf2q1fx0sr" path="res://formula_car.tscn" id="2_31blf"]
 [ext_resource type="Texture2D" uid="uid://bi0swqibxx61x" path="res://Draws/cursa2.png" id="4_h2xay"]
 [ext_resource type="Script" uid="uid://bxj6j5boujn81" path="res://minimap2.gd" id="4_pylxb"]
+[ext_resource type="Script" uid="uid://cki5u1j4ratxp" path="res://minimap.gd" id="6_3hbg1"]
 
 [node name="Game_2" type="Node2D"]
 script = ExtResource("1_31blf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(101240, -68110.9)
+scale = Vector2(100.37, 71.5745)
+texture = ExtResource("4_h2xay")
 
 [node name="Node2D" parent="." instance=ExtResource("1_me4bl")]
 position = Vector2(-5, -4)
@@ -17,38 +24,44 @@ position = Vector2(487, 1521)
 rotation = -1.5708
 scale = Vector2(0.5, 0.5)
 
-[node name="Camera2D" type="Camera2D" parent="FormulaCar"]
-position = Vector2(8.74228e-08, 1.52588e-05)
-rotation = 1.5708
-ignore_rotation = false
-zoom = Vector2(2.5, 2.5)
-
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="UI"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="FormulaCar"]
+z_index = 100
+z_as_relative = false
+texture_filter = 1
 anchors_preset = -1
-anchor_left = -0.0234375
-anchor_top = -0.0385802
-anchor_right = -0.0234375
-anchor_bottom = -0.0385802
-offset_left = 666.0
-offset_top = 1392.0
-offset_right = 716.0
-offset_bottom = 1442.0
+anchor_left = -0.046875
+anchor_top = -0.0771605
+anchor_right = -0.046875
+anchor_bottom = -0.0771605
+offset_left = 255.998
+offset_top = 456.001
+offset_right = 335.998
+offset_bottom = 536.001
+rotation = -3.14159
 scale = Vector2(2.18, 2.18)
 metadata/_edit_use_anchors_ = true
 
-[node name="SubViewport" type="SubViewport" parent="UI/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="FormulaCar/SubViewportContainer"]
+disable_3d = true
 handle_input_locally = false
-size = Vector2i(23, 25)
+size = Vector2i(80, 80)
 render_target_update_mode = 4
 script = ExtResource("4_pylxb")
 
-[node name="Sprite2D" type="Sprite2D" parent="UI/SubViewportContainer/SubViewport"]
-position = Vector2(232.569, -75.2293)
-scale = Vector2(0.455, 0.455)
-texture = ExtResource("4_h2xay")
+[node name="Camera2D" type="Camera2D" parent="FormulaCar/SubViewportContainer/SubViewport"]
+position = Vector2(117.43, 209.175)
+zoom = Vector2(0.07, 0.07)
 
-[node name="Camera2D" type="Camera2D" parent="UI/SubViewportContainer/SubViewport"]
-position = Vector2(-9.1743, 19.2661)
-zoom = Vector2(0.2, 0.2)
+[node name="Sprite2D" type="Sprite2D" parent="FormulaCar/SubViewportContainer/SubViewport"]
+texture_filter = 1
+position = Vector2(-153.21, -429.358)
+rotation = -1.5708
+scale = Vector2(0.91, 0.91)
+texture = ExtResource("4_h2xay")
+script = ExtResource("6_3hbg1")
+
+[node name="Sprite2D2" type="Sprite2D" parent="FormulaCar/SubViewportContainer/SubViewport"]
+z_index = -5
+position = Vector2(101240, -68110.9)
+scale = Vector2(100.37, 71.5745)
+texture = ExtResource("4_h2xay")

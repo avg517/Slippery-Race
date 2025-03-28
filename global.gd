@@ -20,11 +20,13 @@ func _ready():
 	
 	
 #campaign variables
-var money = 0.0
-var moneyLap
+var money = 1.0
+var moneyLap=100.0
 
 
-
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("Menu"):
+		get_tree().change_scene_to_file("res://menu.tscn")
 
 func save():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)

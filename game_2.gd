@@ -5,15 +5,17 @@ extends Node2D
 func _ready():
 	Global.onGrass = false
 	Global.lap = 0
+	int(Global.money)
+	print(Global.money)
 
 func _physics_process(delta: float) -> void:
 	get_node("FormulaCar/Label2").text = str(Global.speed_1)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("Menu"):
-		get_tree().change_scene_to_file("res://menu.tscn")
+	
 	if Global.lap > 3:
 		Global.money += 1000/Global.moneyLap
+		int(Global.money)
 		Global.Ptime = Global.LapTime
 		Global.save()
 		print(Global.money)

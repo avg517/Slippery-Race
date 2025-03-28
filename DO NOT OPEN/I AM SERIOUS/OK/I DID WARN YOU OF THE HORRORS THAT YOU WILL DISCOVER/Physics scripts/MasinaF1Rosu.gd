@@ -53,19 +53,19 @@ func _physics_process(delta):
 		torq = 17.5
 	elif(gear==2):
 		topSpeed=gear2
-		torq = 14.0
+		torq = 12.0
 	elif(gear==3):
 		topSpeed=gear3
-		torq = 11.0
+		torq = 7.0
 	elif(gear==4):
 		topSpeed=gear4
-		torq = 9.0
+		torq = 5.0
 	elif(gear==5):
 		topSpeed=gear5
-		torq = 7.0
+		torq = 3.0
 	elif(gear==6):
 		topSpeed=gear6
-		torq = 5.0
+		torq = 2.0
 	elif(gear==0):
 		topSpeed=20.0
 		torq=20.0
@@ -109,6 +109,6 @@ func _physics_process(delta):
 		speed -= Vector2(cos (speed.angle()) * 100.0,sin (speed.angle()) * 100.0)
 	#menuEntering
 	if Global.onGrass == true:
-		friction(topSpeed/torq,1);
+		friction(topSpeed,25/torq);
 	else:
 		friction(topSpeed,1);

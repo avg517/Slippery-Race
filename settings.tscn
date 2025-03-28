@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cffmceros0vng"]
+
+[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="1_x2hje"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="placeholder" type="Sprite2D" parent="."]
+z_index = -9
+texture_filter = 1
+position = Vector2(574, 326)
+scale = Vector2(2.30389, 2.30389)
+texture = ExtResource("1_x2hje")

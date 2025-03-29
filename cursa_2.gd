@@ -17,6 +17,7 @@ func update_ui():
 func _physics_process(delta):
 	if Global.lap >= 1:
 		Global.LapTime = float(Global.LapTime) + delta
+		Global.moneyLap = Global.LapTime
 		update_ui()
 	if (Global.lap>=1):
 		readyy = true

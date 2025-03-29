@@ -13,8 +13,10 @@ func _process(delta):
 	if Input.is_action_pressed("Menu"):
 		get_tree().change_scene_to_file("res://menu.tscn")
 	if Global.lap > 3:
+		Global.money += 1000/Global.moneyLap
 		Global.Ptime = Global.LapTime
 		Global.save()
+		print(Global.money)
 		get_tree().change_scene_to_file("res://menu.tscn")
 		Global.LapTime = 0
 		Global.lap = 0

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1p8xe0ft6urp"]
+
+[ext_resource type="Texture2D" uid="uid://blw3o2f5viaof" path="res://Draws/cursa test.png" id="1_co24e"]
+[ext_resource type="Script" uid="uid://cnids4lfefajs" path="res://testing.gd" id="1_feb8i"]
+[ext_resource type="PackedScene" uid="uid://0uwf2q1fx0sr" path="res://formula_car.tscn" id="2_feb8i"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_feb8i")
+
+[node name="CursaTest" type="Sprite2D" parent="."]
+position = Vector2(684.25, 8977)
+scale = Vector2(1.21607, 3.04875)
+texture = ExtResource("1_co24e")
+
+[node name="FormulaCar" parent="." instance=ExtResource("2_feb8i")]
+position = Vector2(551, 19589)
+rotation = -1.57312
+scale = Vector2(0.5, 0.5)

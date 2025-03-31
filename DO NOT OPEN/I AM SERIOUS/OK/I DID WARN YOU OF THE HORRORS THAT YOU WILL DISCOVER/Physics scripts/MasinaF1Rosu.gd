@@ -4,6 +4,7 @@ var fric = 500.0
 #var acc=5.0
 #velocity idk
 #gears top speed
+var gears =[20.0,34.0,51.0,68.0,85.0,102.0,120.0]
 var gear=1
 var gear1=34.0
 var gear2=51.0
@@ -45,9 +46,15 @@ func accel(acceler,directie):
 		speed += Vector2(cos (global_rotation) * acceler,sin (global_rotation) * acceler)
 	else:
 		speed -= Vector2(cos (global_rotation) * acceler,sin (global_rotation) * acceler)
-
+func automatic():
+	
+	if(int(speed.length()/4)>=gears[gear] and gear!=6):
+		gear+=1
+	if(int(speed.length()/4)<=gears[gear-1] and gear!=1):
+		gear-=1
 
 func _physics_process(delta):
+	
 	if(gear==1):
 		topSpeed=gear1
 		torq = 17.5
@@ -90,13 +97,20 @@ func _physics_process(delta):
 			accel(torq,1) #5 e default
 		else:
 			accel(torq,2)
+	if(Global.manual==false):
+		if(int(speed.length()/4)>=gears[gear] and gear!=6):
+			gear+=1
+		if(int(speed.length()/4)<=gears[gear-1] and gear!=1):
+			gear-=1
+		#automatic()
 	if Input.is_action_pressed("P1_Move_Down"):
 		breaks(10.0)
 		#friction(20.0);
-	if Input.is_action_just_released("P1_gear_up") and gear!=6:
-		gear+=1
-	if Input.is_action_just_released("P1_gear_down") and gear !=0:
-		gear-=1
+	if(Global.manual==true):
+		if Input.is_action_just_released("P1_gear_up") and gear!=6:
+			gear+=1
+		if Input.is_action_just_released("P1_gear_down") and gear !=0:
+			gear-=1
 	velocity = speed
 	move_and_slide()
 	#rotation

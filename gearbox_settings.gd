@@ -11,5 +11,11 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_gearbox_pressed() -> void:
-	get_tree().change_scene_to_file("res://Gearbox_settings.tscn")
+func _on_automatic_pressed() -> void:
+	Global.manual= false
+	get_tree().change_scene_to_file("res://menu.tscn")
+
+
+func _on_manual_pressed() -> void:
+	Global.manual= true
+	get_tree().change_scene_to_file("res://menu.tscn")

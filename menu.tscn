@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bntfwymt7rhol"]
+[gd_scene load_steps=6 format=3 uid="uid://bntfwymt7rhol"]
 
 [ext_resource type="Script" uid="uid://chnml7h71htco" path="res://menu.gd" id="1_7xksh"]
 [ext_resource type="Texture2D" uid="uid://cvvtb6a73016f" path="res://Draws/Quit.png" id="2_idlt0"]
 [ext_resource type="Texture2D" uid="uid://dgtr6rd251lwx" path="res://Draws/Start.png" id="3_21wd0"]
+[ext_resource type="Texture2D" uid="uid://csxiwh540gog1" path="res://Draws/settings.png" id="3_ytr4m"]
 [ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="4_mc0u1"]
 
 [node name="Control" type="Control"]
@@ -18,29 +19,44 @@ script = ExtResource("1_7xksh")
 auto_translate_mode = 2
 layout_mode = 2
 offset_left = 479.0
-offset_top = 232.0
+offset_top = 193.345
 offset_right = 673.0
-offset_bottom = 323.0
+offset_bottom = 284.345
 flat = true
+
+[node name="Start2" type="Sprite2D" parent="Start"]
+texture_filter = 1
+position = Vector2(102, 48)
+texture = ExtResource("3_21wd0")
+
+[node name="settngs" type="Button" parent="."]
+auto_translate_mode = 2
+layout_mode = 2
+offset_left = 458.995
+offset_top = 300.025
+offset_right = 699.995
+offset_bottom = 372.025
+flat = true
+
+[node name="settings" type="Sprite2D" parent="settngs"]
+texture_filter = 1
+position = Vector2(123, 32.57)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_ytr4m")
 
 [node name="quit" type="Button" parent="."]
 auto_translate_mode = 2
 layout_mode = 2
 offset_left = 485.0
-offset_top = 345.0
+offset_top = 391.095
 offset_right = 659.0
-offset_bottom = 433.0
+offset_bottom = 479.095
 flat = true
 
-[node name="Quit" type="Sprite2D" parent="."]
+[node name="Quit" type="Sprite2D" parent="quit"]
 texture_filter = 1
-position = Vector2(582, 390)
+position = Vector2(97, 45)
 texture = ExtResource("2_idlt0")
-
-[node name="Start2" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(581, 280)
-texture = ExtResource("3_21wd0")
 
 [node name="Cursa1" type="Sprite2D" parent="."]
 z_index = -9
@@ -50,4 +66,5 @@ scale = Vector2(2.30389, 2.30389)
 texture = ExtResource("4_mc0u1")
 
 [connection signal="pressed" from="Start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="settngs" to="." method="_on_settngs_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

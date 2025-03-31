@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://w7rljxmlp0p2"]
+
+[ext_resource type="Script" uid="uid://2ffif0ky1okl" path="res://gearbox_settings.gd" id="1_k1ei7"]
+[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="1_ys0rw"]
+[ext_resource type="Texture2D" uid="uid://clm5lh8qake5p" path="res://Draws/Automatic.png" id="3_4a4fr"]
+[ext_resource type="Texture2D" uid="uid://r13ubgca7yt7" path="res://Draws/manual.png" id="4_1wuw3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k1ei7")
+
+[node name="placeholder" type="Sprite2D" parent="."]
+z_index = -9
+texture_filter = 1
+position = Vector2(574, 326)
+scale = Vector2(2.30389, 2.30389)
+texture = ExtResource("1_ys0rw")
+
+[node name="Automatic" type="Button" parent="."]
+auto_translate_mode = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -89.0
+offset_right = 155.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Start2" type="Sprite2D" parent="Automatic"]
+texture_filter = 1
+position = Vector2(154, 32.415)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_4a4fr")
+
+[node name="Manual" type="Button" parent="."]
+auto_translate_mode = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = 39.0
+offset_right = 112.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Start2" type="Sprite2D" parent="Manual"]
+texture_filter = 1
+position = Vector2(112, 32.055)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_1wuw3")
+
+[connection signal="pressed" from="Automatic" to="." method="_on_automatic_pressed"]
+[connection signal="pressed" from="Manual" to="." method="_on_manual_pressed"]

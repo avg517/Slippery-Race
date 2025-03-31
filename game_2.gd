@@ -14,7 +14,10 @@ func _physics_process(delta: float) -> void:
 func _process(delta):
 	
 	if Global.lap > 3:
-		Global.money += 1000/Global.moneyLap
+		if(Global.manual==true):
+			Global.money += 1000/Global.moneyLap
+		else:
+			Global.money += (1000/Global.moneyLap)/2
 		int(Global.money)
 		Global.Ptime = Global.LapTime
 		Global.save()

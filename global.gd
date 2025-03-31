@@ -15,6 +15,8 @@ var poz1X
 var rot1
 var gearr
 
+var manual = false #gearbox settings
+
 func _ready():
 	load_data()
 	
@@ -32,6 +34,7 @@ func save():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	file.store_var(Ptime)
 	file.store_var(money)
+	file.store_var(manual)
 	
 	
 func load_data():
@@ -39,6 +42,8 @@ func load_data():
 		var file = FileAccess.open(save_path, FileAccess.READ)
 		Ptime = file.get_var(Ptime)
 		money = file.get_var(money)
+		manual = file.get_var(manual)
 	else:
 		Ptime=0.0
 		money = 0.0
+		manual = false

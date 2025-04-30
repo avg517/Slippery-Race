@@ -127,7 +127,6 @@ func _physics_process(delta):
 		if(int(speed.length()/4)>=gears[gear] and gear!=6):
 >>>>>>> parent of f2b6fdc (gearbox 1600)
 			gear+=1
-		if(int(speed.length()/4)<=gears1[gear-1] and gear!=1):
 		if(int(speed.length()/4)<=gears[gear-1] and gear!=1):
 			gear-=1
 	elif(Global.top_speed==220.0):

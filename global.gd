@@ -46,4 +46,4 @@ func load_data():
 	else:
 		Ptime=0.0
 		money = 0.0
-		manual = true
+		manual = false

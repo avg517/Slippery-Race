@@ -11,10 +11,14 @@ func _ready() -> void:
 #var acc=5.0
 #velocity idk
 #gears top speed
+<<<<<<< HEAD
 var gears2 =[20.0,62.8,78.5,100.0,122.0,157.5,220.0]
 var torq2 = [20.0,10.0,7.6,6.4,5.6,4.8,2.0]
 
 var gears1 =[20.0,34.0,51.0,68.0,85.0,102.0,120.0]
+=======
+var gears =[20.0,34.0,51.0,68.0,85.0,102.0,120.0]
+>>>>>>> parent of f2b6fdc (gearbox 1600)
 var gear=1
 var gear1=34.0
 var gear2=51.0
@@ -65,10 +69,66 @@ func accel(acceler,directie):
 	else:
 		speed -= Vector2(cos (global_rotation) * acceler,sin (global_rotation) * acceler)
 func automatic():
+<<<<<<< HEAD
 	if(Global.top_speed==120.0):
 		if(int(speed.length()/4)>=gears1[gear] and gear!=6):
+=======
+	
+	if(int(speed.length()/4)>=gears[gear] and gear!=6):
+		gear+=1
+	if(int(speed.length()/4)<=gears[gear-1] and gear!=1):
+		gear-=1
+
+func _physics_process(delta):
+	
+	if(gear==1):
+		topSpeed=gear1
+		torq = 17.5
+	elif(gear==2):
+		topSpeed=gear2
+		torq = 12.0
+	elif(gear==3):
+		topSpeed=gear3
+		torq = 7.0
+	elif(gear==4):
+		topSpeed=gear4
+		torq = 5.0
+	elif(gear==5):
+		topSpeed=gear5
+		torq = 3.0
+	elif(gear==6):
+		topSpeed=gear6
+		torq = 2.0
+	elif(gear==0):
+		topSpeed=20.0
+		torq=20.0
+	#movement 
+	Global.poz1Y = global_position.y
+	Global.poz1X = global_position.x
+	Global.rot1 = global_rotation
+	var LabelP2 = "Lap %s"
+	var lapp = str(Global.lap)
+	get_node("Label3").text = LabelP2 % lapp
+	var LabelT = "Time %s"
+	get_node("Label4").text = LabelT % Global.LapTime
+	var LabelTP = "Previous Time %s"
+	get_node("Label5").text = LabelTP % Global.Ptime
+	var Label6 = "Gear: %s"
+	get_node("Label6").text = Label6 % gear
+	var LabelP1 = "%s KM/H"
+		#get_node("Label").text = LabelP1 % int(speed.length()/4)
+	Global.speed_1 = LabelP1 % int(speed.length()/4)
+	if Input.is_action_pressed("P1_Move_Up"):
+		if(gear!=0):
+			accel(torq,1) #5 e default
+		else:
+			accel(torq,2)
+	if(Global.manual==false):
+		if(int(speed.length()/4)>=gears[gear] and gear!=6):
+>>>>>>> parent of f2b6fdc (gearbox 1600)
 			gear+=1
 		if(int(speed.length()/4)<=gears1[gear-1] and gear!=1):
+		if(int(speed.length()/4)<=gears[gear-1] and gear!=1):
 			gear-=1
 	elif(Global.top_speed==220.0):
 		if(int(speed.length()/4)>=gears2[gear] and gear!=6):

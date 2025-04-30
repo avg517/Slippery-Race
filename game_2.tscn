@@ -65,3 +65,6 @@ z_index = -5
 position = Vector2(101240, -68110.9)
 scale = Vector2(100.37, 71.5745)
 texture = ExtResource("4_h2xay")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("..")

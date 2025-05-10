@@ -15,6 +15,10 @@ var poz1X
 var rot1
 var gearr
 
+#variabile de la masina
+var rotMasina
+
+
 var manual = false #gearbox settings
 
 func _ready():

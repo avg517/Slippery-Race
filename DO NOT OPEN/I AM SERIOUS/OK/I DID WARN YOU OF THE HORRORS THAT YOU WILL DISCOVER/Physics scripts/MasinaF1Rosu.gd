@@ -57,6 +57,7 @@ func automatic():
 		gear-=1
 
 func _physics_process(delta):
+	Global.rotMasina = global_rotation
 	if (Global.top_speed==120):
 		if(gear==1):
 			topSpeed=gear1

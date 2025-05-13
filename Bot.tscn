@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c47ok8ikndidl"]
+
+[ext_resource type="Texture2D" uid="uid://dmnqivixh8bel" path="res://Draws/Masina F1 Albastra.png" id="1_ro7h1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sck5o"]
+size = Vector2(43, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6hsy"]
+size = Vector2(41, 24)
+
+[node name="Bot" type="CharacterBody2D"]
+
+[node name="MasinaF1Rosu" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_ro7h1")
+
+[node name="coll" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coll"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_sck5o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_q6hsy")

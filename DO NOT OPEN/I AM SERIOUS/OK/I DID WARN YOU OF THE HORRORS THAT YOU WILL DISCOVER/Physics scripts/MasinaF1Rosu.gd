@@ -40,9 +40,9 @@ func breaks(force):
 	
 func rotatee(direction,speedd): #right =1
 	if(direction==1):
-		global_rotation_degrees += speedd#/(speed.length()/2 + 0.1) -1
+		global_rotation_degrees += speedd*1#/(speed.length()/2 + 0.1) -1
 	elif(direction==0):
-		global_rotation_degrees -= speedd#/(speed.length()/2+ 0.1)-1
+		global_rotation_degrees -= speedd*1#/(speed.length()/2+ 0.1)-1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func accel(acceler,directie):
 	if(directie==1):

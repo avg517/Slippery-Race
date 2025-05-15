@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://dmnqivixh8bel" path="res://Draws/Masina F1 Albastra.png" id="1_ro7h1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sck5o"]
-size = Vector2(43, 26)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6hsy"]
 size = Vector2(41, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sck5o"]
+size = Vector2(43, 26)
 
 [node name="Bot" type="CharacterBody2D"]
 
@@ -14,13 +14,14 @@ size = Vector2(41, 24)
 texture_filter = 1
 texture = ExtResource("1_ro7h1")
 
-[node name="coll" type="Area2D" parent="."]
-unique_name_in_owner = true
+[node name="Path_d" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="coll"]
+[node name="PathDetect" type="CollisionShape2D" parent="Path_d"]
 position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_sck5o")
+shape = SubResource("RectangleShape2D_q6hsy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_q6hsy")
+shape = SubResource("RectangleShape2D_sck5o")

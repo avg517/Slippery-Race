@@ -17,7 +17,7 @@ var gearr
 
 #variabile de la masina
 var rotMasina
-
+var bot_touch
 
 var manual = false #gearbox settings
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://wlsok4gt4uyy"]
+[gd_scene load_steps=11 format=3 uid="uid://wlsok4gt4uyy"]
 
 [ext_resource type="Script" uid="uid://duwy6re3uerep" path="res://game_2.gd" id="1_31blf"]
 [ext_resource type="PackedScene" uid="uid://dyr3yh2h4a5sf" path="res://cursa2.tscn" id="1_me4bl"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bxj6j5boujn81" path="res://minimap2.gd" id="4_pylxb"]
 [ext_resource type="Script" uid="uid://cki5u1j4ratxp" path="res://minimap.gd" id="6_3hbg1"]
 [ext_resource type="Script" uid="uid://cx07w3uerx4ws" path="res://path_follow_2d.gd" id="7_5swrt"]
+[ext_resource type="Texture2D" uid="uid://b2oer66in26wh" path="res://Draws/Minimap_border.png" id="7_mo5db"]
 
 [sub_resource type="Curve2D" id="Curve2D_3hbg1"]
 _data = {
@@ -75,6 +76,11 @@ position = Vector2(101240, -68110.9)
 scale = Vector2(100.37, 71.5745)
 texture = ExtResource("4_h2xay")
 
+[node name="MinimapBorder" type="Sprite2D" parent="FormulaCar"]
+position = Vector2(168.596, 368.773)
+scale = Vector2(0.648719, 0.683986)
+texture = ExtResource("7_mo5db")
+
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_3hbg1")
 
@@ -88,5 +94,4 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Area2D"]
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_mo5db")

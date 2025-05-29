@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4qe68n3ov0v0"]
 
-[ext_resource type="Script" uid="uid://2ffif0ky1okl" path="res://gearbox_settings.gd" id="1_us8vh"]
+[ext_resource type="Script" uid="uid://bs7ja5nejujv" path="res://camera_settings.gd" id="1_o7lo5"]
 [ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="2_c7x6d"]
-[ext_resource type="Texture2D" uid="uid://clm5lh8qake5p" path="res://Draws/Automatic.png" id="3_wiuof"]
+[ext_resource type="Texture2D" uid="uid://brbcb4uvx40li" path="res://Draws/Smooth_camera_on.png" id="3_o7lo5"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_us8vh")
+script = ExtResource("1_o7lo5")
 
 [node name="placeholder" type="Sprite2D" parent="."]
 z_index = -9
@@ -36,10 +36,10 @@ grow_horizontal = 2
 grow_vertical = 2
 flat = true
 
-[node name="Start2" type="Sprite2D" parent="Automatic"]
+[node name="smooth_camera" type="Sprite2D" parent="Automatic"]
 texture_filter = 1
 position = Vector2(154, 32.415)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("3_wiuof")
+texture = ExtResource("3_o7lo5")
 
 [connection signal="pressed" from="Automatic" to="." method="_on_automatic_pressed"]

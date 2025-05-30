@@ -15,8 +15,12 @@ var poz1X
 var rot1
 var gearr
 
-var manual = false #gearbox settings
+#variabile de la masina
+var rotMasina
+var bot_touch
 
+var manual = false #gearbox settings
+var smooth_camera = true #e logic
 func _ready():
 	load_data()
 	
@@ -46,4 +50,4 @@ func load_data():
 	else:
 		Ptime=0.0
 		money = 0.0
-		manual = false
+		manual = true

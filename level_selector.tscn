@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ys1ua8l0cf3c"]
 
-[ext_resource type="Script" uid="uid://bt88q6k7j4rh3" path="res://level_selector.gd" id="1_2db0o"]
+[ext_resource type="Script" uid="uid://bt88q6k7j4rh3" path="res://Scripts/Maps/level_selector.gd" id="1_2db0o"]
 [ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="1_5xyw6"]
 [ext_resource type="Texture2D" uid="uid://do5ani6k3nao5" path="res://Draws/SpeedCircuit1.png" id="2_5xyw6"]
 

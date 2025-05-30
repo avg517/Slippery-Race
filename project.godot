@@ -18,7 +18,7 @@ config/icon="res://Draws/splash.png"
 
 [autoload]
 
-Global="*res://global.gd"
+Global="*res://Scripts/other/global.gd"
 
 [display]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://crwe6t8bw3iqd"]
 
-[ext_resource type="Script" uid="uid://dcouodpr3kmlu" path="res://multiplayer.gd" id="1_wktud"]
+[ext_resource type="Script" uid="uid://dcouodpr3kmlu" path="res://DO NOT OPEN/I AM SERIOUS/OK/I DID WARN YOU OF THE HORRORS THAT YOU WILL DISCOVER/Multiplayer scripts (throws up)/multiplayer.gd" id="1_wktud"]
 [ext_resource type="PackedScene" uid="uid://0uwf2q1fx0sr" path="res://formula_car.tscn" id="2_5bi2t"]
 
 [node name="main" type="Node2D"]

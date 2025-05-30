@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://br2w2dnnf6ygj"]
 
-[ext_resource type="Script" uid="uid://cdwd3dgvbafwp" path="res://Difficulty selector.gd" id="1_ih8ps"]
+[ext_resource type="Script" uid="uid://cdwd3dgvbafwp" path="res://Scripts/Campaign/Difficulty selector.gd" id="1_ih8ps"]
 [ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="2_7ms2f"]
 [ext_resource type="Texture2D" uid="uid://bluokmf7kdjmd" path="res://Draws/1000CC.png" id="3_mpp1l"]
 [ext_resource type="Texture2D" uid="uid://c1s7pqy10hl58" path="res://Draws/1600CC.png" id="4_50bik"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bsww0gnl7tvpg" path="res://Draws/Masina F1 Rosu.png" id="1_5wioo"]
 [ext_resource type="Script" uid="uid://bbw66a15qtuqd" path="res://DO NOT OPEN/I AM SERIOUS/OK/I DID WARN YOU OF THE HORRORS THAT YOU WILL DISCOVER/Physics scripts/MasinaF1Rosu.gd" id="1_wwa7m"]
-[ext_resource type="Script" uid="uid://cnuxnnifyh1v8" path="res://global.gd" id="3_n3r6k"]
+[ext_resource type="Script" uid="uid://cnuxnnifyh1v8" path="res://Scripts/other/global.gd" id="3_n3r6k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bonj"]
 size = Vector2(43, 26)

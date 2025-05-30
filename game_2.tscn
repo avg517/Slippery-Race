@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://wlsok4gt4uyy"]
 
-[ext_resource type="Script" uid="uid://duwy6re3uerep" path="res://game_2.gd" id="1_31blf"]
-[ext_resource type="PackedScene" uid="uid://dyr3yh2h4a5sf" path="res://cursa2.tscn" id="1_me4bl"]
+[ext_resource type="Script" uid="uid://duwy6re3uerep" path="res://Scripts/Maps/game_2.gd" id="1_31blf"]
+[ext_resource type="PackedScene" uid="uid://dyr3yh2h4a5sf" path="res://Race2.tscn" id="1_me4bl"]
 [ext_resource type="PackedScene" uid="uid://0uwf2q1fx0sr" path="res://formula_car.tscn" id="2_31blf"]
 [ext_resource type="Texture2D" uid="uid://bi0swqibxx61x" path="res://Draws/cursa2.png" id="4_h2xay"]
-[ext_resource type="Script" uid="uid://bxj6j5boujn81" path="res://minimap2.gd" id="4_pylxb"]
-[ext_resource type="Script" uid="uid://cki5u1j4ratxp" path="res://minimap.gd" id="6_3hbg1"]
+[ext_resource type="Script" uid="uid://bxj6j5boujn81" path="res://Scripts/other/minimap2.gd" id="4_pylxb"]
+[ext_resource type="Script" uid="uid://cki5u1j4ratxp" path="res://Scripts/other/minimap.gd" id="6_3hbg1"]
 
 [node name="Game_2" type="Node2D"]
 script = ExtResource("1_31blf")

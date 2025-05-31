@@ -1,7 +1,7 @@
 extends CharacterBody2D
 var fric = 500.0
 #acceleration
-#var acc=5.0
+#var acc=5.0 
 #velocity idk
 #gears top speed
 var gears2 =[20.0,62.8,78.5,100.0,122.0,157.5,220.0]

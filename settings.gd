@@ -13,3 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_gearbox_pressed() -> void:
 	get_tree().change_scene_to_file("res://Gearbox_settings.tscn")
+
+
+func _on_camera_button_down() -> void:
+	get_tree().change_scene_to_file("res://camera_settings.tscn")

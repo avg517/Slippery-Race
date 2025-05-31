@@ -20,7 +20,7 @@ var rotMasina
 var bot_touch
 
 var manual = false #gearbox settings
-
+var smooth_camera = true #e logic
 func _ready():
 	load_data()
 	

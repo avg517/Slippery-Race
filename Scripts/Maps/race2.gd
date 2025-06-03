@@ -6,7 +6,7 @@ func _ready():
 	pass # Replace with function body.
 
 func update_ui():
-	var formatted_time = str(Global.LapTime)
+	var formatted_time = str(Global.LapTime) #4721
 	var decimal_index = formatted_time.find(".")
 	
 	if decimal_index > 0:

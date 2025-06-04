@@ -18,11 +18,10 @@ config/icon="res://Draws/splash.png"
 
 [autoload]
 
-Global="*res://global.gd"
+Global="*res://Scripts/other/global.gd"
 
 [display]
 
-window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 
@@ -53,22 +52,6 @@ P1_Move_Left={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
 ]
 }
-P2_Move_Up={
-"deadzone": 0.5,
-"events": []
-}
-P2_Move_Down={
-"deadzone": 0.5,
-"events": []
-}
-P2_Move_Right={
-"deadzone": 0.5,
-"events": []
-}
-P2_Move_Left={
-"deadzone": 0.5,
-"events": []
-}
 Menu={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
@@ -84,6 +67,16 @@ P1_gear_up={
 P1_gear_down={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+]
+}
+join_mp={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":true,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
+]
+}
+host_mp={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":true,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":72,"key_label":0,"unicode":104,"location":0,"echo":false,"script":null)
 ]
 }
 

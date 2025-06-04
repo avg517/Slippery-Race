@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://i1okdbtywvoj"]
 
 [ext_resource type="PackedScene" uid="uid://0uwf2q1fx0sr" path="res://formula_car.tscn" id="1_6gimg"]
-[ext_resource type="PackedScene" uid="uid://ipog80gubyp7" path="res://cursa1.tscn" id="1_svx8e"]
-[ext_resource type="Script" uid="uid://c8hydme0y47dr" path="res://game_f_1.gd" id="1_waxkw"]
+[ext_resource type="PackedScene" uid="uid://ipog80gubyp7" path="res://Race1.tscn" id="1_svx8e"]
+[ext_resource type="Script" uid="uid://c8hydme0y47dr" path="res://Scripts/Maps/game_f_1.gd" id="1_waxkw"]
 [ext_resource type="PackedScene" uid="uid://ce2oqsxj02128" path="res://formula_carB.tscn" id="3_lg0by"]
 
 [node name="GameF1" type="Node2D"]

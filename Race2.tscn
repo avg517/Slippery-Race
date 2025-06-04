@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dyr3yh2h4a5sf"]
 
-[ext_resource type="Script" uid="uid://l5kb8kb67m4m" path="res://cursa_2.gd" id="1_euynr"]
+[ext_resource type="Script" uid="uid://l5kb8kb67m4m" path="res://Scripts/Maps/race_2.gd" id="1_euynr"]
 [ext_resource type="Texture2D" uid="uid://bi0swqibxx61x" path="res://Draws/cursa2.png" id="1_l4doh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euynr"]

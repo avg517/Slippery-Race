@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ipog80gubyp7"]
 
-[ext_resource type="Script" uid="uid://dab8fqgniq883" path="res://cursa1.gd" id="1_ers52"]
+[ext_resource type="Script" uid="uid://dab8fqgniq883" path="res://Scripts/Maps/race2.gd" id="1_ers52"]
 [ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="1_sdho7"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_cql6n"]

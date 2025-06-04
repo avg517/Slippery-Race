@@ -1,0 +1,1 @@
+extends "res://DO NOT OPEN/I AM SERIOUS/OK/I DID WARN YOU OF THE HORRORS THAT YOU WILL DISCOVER/Physics scripts/MasinaF1Rosu.gd"

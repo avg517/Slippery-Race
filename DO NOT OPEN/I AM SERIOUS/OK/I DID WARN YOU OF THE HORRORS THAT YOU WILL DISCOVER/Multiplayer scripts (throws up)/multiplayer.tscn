@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://crwe6t8bw3iqd"]
+
+[ext_resource type="Script" uid="uid://dcouodpr3kmlu" path="res://DO NOT OPEN/I AM SERIOUS/OK/I DID WARN YOU OF THE HORRORS THAT YOU WILL DISCOVER/Multiplayer scripts (throws up)/multiplayer.gd" id="1_wktud"]
+[ext_resource type="PackedScene" uid="uid://0uwf2q1fx0sr" path="res://formula_car.tscn" id="2_5bi2t"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_wktud")
+player_scene = ExtResource("2_5bi2t")
+
+[node name="host" type="Button" parent="."]
+offset_right = 109.0
+offset_bottom = 29.0
+scale = Vector2(3.73, 3.73)
+text = "Host"
+
+[node name="join" type="Button" parent="."]
+offset_top = 118.5
+offset_right = 109.0
+offset_bottom = 149.5
+scale = Vector2(3.73, 3.73)
+text = "Join"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(572, 321)
+enabled = false
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://0uwf2q1fx0sr")
+spawn_path = NodePath("..")
+
+[connection signal="pressed" from="host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="join" to="." method="_on_join_pressed"]

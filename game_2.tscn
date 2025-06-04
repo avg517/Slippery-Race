@@ -78,7 +78,7 @@ position = Vector2(101240, -68110.9)
 scale = Vector2(100.37, 71.5745)
 texture = ExtResource("4_h2xay")
 
-<<<<<<< HEAD
+
 [node name="MinimapBorder" type="Sprite2D" parent="FormulaCar"]
 position = Vector2(168.596, 368.773)
 scale = Vector2(0.648719, 0.683986)
@@ -98,7 +98,4 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Area2D"]
 shape = SubResource("CircleShape2D_mo5db")
-=======
-[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
-spawn_path = NodePath("..")
->>>>>>> main
+

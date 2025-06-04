@@ -1,7 +1,7 @@
 extends CharacterBody2D
 var peer =ENetMultiplayerPeer.new()
 @export var player_scene: PackedScene
-@onready var cam = $Camera2D
+@onready var cam = $Camera2D #habar n-am
 # Called when the node enters the scene tree for the first time.
 
 

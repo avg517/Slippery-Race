@@ -1,16 +1,8 @@
-#<<<<<<< HEAD
-[gd_scene load_steps=6 format=3 uid="uid://0uwf2q1fx0sr"]
+[gd_scene load_steps=7 format=3 uid="uid://cxpeu15sag1js"]
 
 [ext_resource type="Texture2D" uid="uid://bsww0gnl7tvpg" path="res://Draws/Masina F1 Rosu.png" id="1_5wioo"]
 [ext_resource type="Script" uid="uid://bbw66a15qtuqd" path="res://DO NOT OPEN/I AM SERIOUS/OK/I DID WARN YOU OF THE HORRORS THAT YOU WILL DISCOVER/Physics scripts/MasinaF1Rosu.gd" id="1_wwa7m"]
-[ext_resource type="Script" uid="uid://i3skiru8jt1c" path="res://camera_2d.gd" id="3_n3r6k"]
-#=======
-#[gd_scene load_steps=7 format=3 uid="uid://0uwf2q1fx0sr"]
-
-#[ext_resource type="Texture2D" uid="uid://bsww0gnl7tvpg" path="res://Draws/Masina F1 Rosu.png" id="1_5wioo"]
-#[ext_resource type="Script" uid="uid://bbw66a15qtuqd" path="res://DO NOT OPEN/I AM SERIOUS/OK/I DID WARN YOU OF THE HORRORS THAT YOU WILL DISCOVER/Physics scripts/MasinaF1Rosu.gd" id="1_wwa7m"]
-#[ext_resource type="Script" uid="uid://cnuxnnifyh1v8" path="res://Scripts/other/global.gd" id="3_n3r6k"]
-#>>>>>>> main
+[ext_resource type="Script" uid="uid://cnuxnnifyh1v8" path="res://Scripts/other/global.gd" id="3_n3r6k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bonj"]
 size = Vector2(43, 26)
@@ -103,11 +95,6 @@ position = Vector2(8.74228e-08, 1.52588e-05)
 rotation = 1.5708
 ignore_rotation = false
 zoom = Vector2(2.5, 2.5)
-<<<<<<< HEAD
-rotation_smoothing_enabled = true
-script = ExtResource("3_n3r6k")
-=======
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_3bonj")
->>>>>>> main

@@ -103,11 +103,11 @@ position = Vector2(8.74228e-08, 1.52588e-05)
 rotation = 1.5708
 ignore_rotation = false
 zoom = Vector2(2.5, 2.5)
-<<<<<<< HEAD
+
 rotation_smoothing_enabled = true
 script = ExtResource("3_n3r6k")
-=======
+
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_3bonj")
->>>>>>> main
+

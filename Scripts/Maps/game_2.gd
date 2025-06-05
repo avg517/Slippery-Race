@@ -5,6 +5,8 @@ extends Node2D
 func _ready():
 	Global.onGrass = false
 	Global.lap = 0
+	if(Global.money == null):
+		Global.money = 0
 	int(Global.money)
 	print(Global.money)
 

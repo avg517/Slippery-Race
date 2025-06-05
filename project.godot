@@ -22,6 +22,7 @@ Global="*res://Scripts/other/global.gd"
 
 [display]
 
+window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 

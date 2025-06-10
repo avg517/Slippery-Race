@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ys1ua8l0cf3c"]
 
 [ext_resource type="Script" uid="uid://bt88q6k7j4rh3" path="res://Scripts/Maps/level_selector.gd" id="1_2db0o"]
-[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="1_5xyw6"]
+[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Race1.png" id="1_5xyw6"]
 [ext_resource type="Texture2D" uid="uid://do5ani6k3nao5" path="res://Draws/SpeedCircuit1.png" id="2_5xyw6"]
 
 [node name="Control" type="Control"]
@@ -13,14 +13,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2db0o")
 
-[node name="Cursa1" type="Sprite2D" parent="."]
+[node name="Race1" type="Sprite2D" parent="."]
 z_index = -9
 texture_filter = 1
 position = Vector2(574, 326)
 scale = Vector2(2.30389, 2.30389)
 texture = ExtResource("1_5xyw6")
 
-[node name="Cursa2" type="Button" parent="."]
+[node name="Race2" type="Button" parent="."]
 auto_translate_mode = 2
 layout_mode = 1
 anchors_preset = 8
@@ -36,10 +36,10 @@ grow_horizontal = 2
 grow_vertical = 2
 flat = true
 
-[node name="Start2" type="Sprite2D" parent="Cursa2"]
+[node name="Start2" type="Sprite2D" parent="Race2"]
 texture_filter = 1
 position = Vector2(196, 46)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_5xyw6")
 
-[connection signal="pressed" from="Cursa2" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Race2" to="." method="_on_start_pressed"]

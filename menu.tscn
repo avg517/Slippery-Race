@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cvvtb6a73016f" path="res://Draws/Quit.png" id="2_idlt0"]
 [ext_resource type="Texture2D" uid="uid://dgtr6rd251lwx" path="res://Draws/Start.png" id="3_21wd0"]
 [ext_resource type="Texture2D" uid="uid://csxiwh540gog1" path="res://Draws/settings.png" id="3_ytr4m"]
-[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="4_mc0u1"]
+[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Race1.png" id="4_mc0u1"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -58,7 +58,7 @@ texture_filter = 1
 position = Vector2(97, 45)
 texture = ExtResource("2_idlt0")
 
-[node name="Cursa1" type="Sprite2D" parent="."]
+[node name="race1" type="Sprite2D" parent="."]
 z_index = -9
 texture_filter = 1
 position = Vector2(574, 326)

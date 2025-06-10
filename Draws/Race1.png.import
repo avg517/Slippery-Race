@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi0swqibxx61x"
-path="res://.godot/imported/cursa2.png-96a7e0c5e6e01147f86771117c429ad5.ctex"
+uid="uid://dk1jsd8c1pd3u"
+path="res://.godot/imported/Race1.png-30f57aa420ccf7ee5234cf0491d5958a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Draws/cursa2.png"
-dest_files=["res://.godot/imported/cursa2.png-96a7e0c5e6e01147f86771117c429ad5.ctex"]
+source_file="res://Draws/Race1.png"
+dest_files=["res://.godot/imported/Race1.png-30f57aa420ccf7ee5234cf0491d5958a.ctex"]
 
 [params]
 

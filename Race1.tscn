@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ipog80gubyp7"]
 
 [ext_resource type="Script" uid="uid://dab8fqgniq883" path="res://Scripts/Maps/race2.gd" id="1_ers52"]
-[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="1_sdho7"]
+[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Race1.png" id="1_sdho7"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_cql6n"]
 a = Vector2(1148, 654)
@@ -19,12 +19,12 @@ b = Vector2(-575, -325)
 a = Vector2(127, -178)
 b = Vector2(127, -328)
 
-[node name="Cursa1" type="CharacterBody2D"]
+[node name="Race1" type="CharacterBody2D"]
 script = ExtResource("1_ers52")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Cursa1" type="Sprite2D" parent="."]
+[node name="Race1" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2.30389, 2.30389)
 texture = ExtResource("1_sdho7")

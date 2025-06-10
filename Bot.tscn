@@ -10,7 +10,7 @@ size = Vector2(43, 26)
 
 [node name="Bot" type="CharacterBody2D"]
 
-[node name="MasinaF1Rosu" type="Sprite2D" parent="."]
+[node name="carF1" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_ro7h1")
 

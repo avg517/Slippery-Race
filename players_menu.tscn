@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d1gclocrf6i6t" path="res://Draws/1Player.png" id="1_6iy4l"]
 [ext_resource type="Script" uid="uid://dpb0mqwhrbbgf" path="res://Scripts/Campaign/players_menu.gd" id="1_u8usx"]
 [ext_resource type="Texture2D" uid="uid://culihooi70qy8" path="res://Draws/2Players.png" id="2_6h2dr"]
-[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Cursa1.png" id="4_3tnm3"]
+[ext_resource type="Texture2D" uid="uid://dk1jsd8c1pd3u" path="res://Draws/Race1.png" id="4_3tnm3"]
 
 [node name="PlayersMenu" type="Control"]
 layout_mode = 3
@@ -45,7 +45,7 @@ position = Vector2(571, 387)
 scale = Vector2(0.425743, 0.425743)
 texture = ExtResource("2_6h2dr")
 
-[node name="Cursa1" type="Sprite2D" parent="."]
+[node name="race1" type="Sprite2D" parent="."]
 z_index = -1
 texture_filter = 1
 position = Vector2(575.601, 322)

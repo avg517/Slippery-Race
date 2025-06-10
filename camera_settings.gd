@@ -9,7 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if(Global.smooth_camera== true):
-		$Automatic/smooth_camera.set_texture("res://Draws/Smooth_camera_on.png")
+		$Automatic/smooth_camera.set_texture("res://Draws/Smooth_camera_on.png") #doesn't work
 	else:
 		$Automatic/smooth_camera.set_texture("res://Draws/Smooth_camera_off.png")
 

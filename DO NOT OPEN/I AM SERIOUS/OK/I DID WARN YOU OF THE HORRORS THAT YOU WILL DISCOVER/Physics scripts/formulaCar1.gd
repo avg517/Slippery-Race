@@ -22,7 +22,7 @@ var speed = Vector2(0,0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
-func friction (force,mult): #force = viteza maxima mult e multiply, lasa 1 pentru acceleratie normala
+func friction (force,mult): #force = max speed mult is multiply, let 1 for normal accelaration
 	speed -= Vector2(cos (speed.angle()) * speed.length()/force*mult*torq/5,sin (speed.angle()) * speed.length()/force*mult*torq/5)
 	#if speed.x > 0.0:
 	#	speed.x -= force
@@ -44,8 +44,8 @@ func rotatee(direction,speedd): #right =1
 	elif(direction==0):
 		global_rotation_degrees -= speedd*1#/(speed.length()/2+ 0.1)-1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func accel(acceler,directie):
-	if(directie==1):
+func accel(acceler,direction):
+	if(direction==1):
 		speed += Vector2(cos (global_rotation) * acceler,sin (global_rotation) * acceler)
 	else:
 		speed -= Vector2(cos (global_rotation) * acceler,sin (global_rotation) * acceler)
@@ -57,7 +57,7 @@ func automatic():
 		gear-=1
 
 func _physics_process(delta):
-	Global.rotMasina = global_rotation
+	Global.rotCar = global_rotation
 	if (Global.top_speed==120):
 		if(gear==1):
 			topSpeed=gear1
@@ -126,8 +126,8 @@ func _physics_process(delta):
 	if Input.is_action_pressed("P1_Move_Left"):
 		rotatee(0,4)#global_rotation_degrees -= 10/speed.length()
 	var overlapping_mobs = %coll.get_overlapping_bodies()
-	if (overlapping_mobs.size() > 1 and speed.x*cos (global_rotation) > 0 and speed.y *sin (global_rotation)>0):
-		speed -= Vector2(cos (speed.angle()) * 100.0,sin (speed.angle()) * 100.0)
+	if (overlapping_mobs.size() > 1 and speed.x*cos (global_rotation) > 0 and speed.y *sin (global_rotation)>0): 
+		speed -= Vector2(cos (speed.angle()) * 100.0,sin (speed.angle()) * 100.0) #some weird things i saw in a dream
 	#menuEntering
 	if Global.onGrass == true:
 		friction(topSpeed,25/torq);

@@ -5,11 +5,11 @@ var rot
 func _ready() -> void:
 	pass # Replace with function body.
 
-func smooth_transition(viteza):
+func smooth_transition(speedd):
 	if(rot < Global.rotMasina+3.14159265358979323846264338327/2):
-		global_rotation += viteza
+		global_rotation += speedd
 	else:if(rot > Global.rotMasina+3.14159265358979323846264338327/2):
-		global_rotation -= viteza
+		global_rotation -= speedd
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	rot = global_rotation

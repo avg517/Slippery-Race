@@ -5,7 +5,7 @@ var save_path = "user://variable.save"
 var P2 = false
 var lap = 0
 var LapTime = 0.0
-var Ptime=0.0 #cel mai bun timp
+var Ptime=0.0 #the best time
 var onGrass = false
 var speed_1 = 0
 var top_speed = 120.0
@@ -16,11 +16,11 @@ var rot1
 var gearr
 
 #variabile de la masina
-var rotMasina
+var rotCar
 var bot_touch
 
 var manual = false #gearbox settings
-var smooth_camera = true #e logic
+var smooth_camera = true #is logical
 func _ready():
 	manual = false
 	load_data()
